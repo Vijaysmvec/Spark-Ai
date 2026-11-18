@@ -1,0 +1,14 @@
+{
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "SPARK AI",
+        "authorizedRedirectUris": [
+          "https://spark-ai-49afa.firebaseapp.com/__/auth/handler",
+          "http://localhost:3000"
+        ]
+      }
+    }
+  }
+}

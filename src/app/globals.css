@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 154 70% 4%;
+    --foreground: 60 30% 96%;
+  }
+
+  * {
+    border-color: rgba(212, 175, 55, 0.22);
+  }
+
+  html,
+  body {
+    background-color: #03110B;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 65% -10%, rgba(16, 185, 129, 0.22), transparent 65%),
+      radial-gradient(ellipse 55% 40% at 15% 95%, rgba(212, 175, 55, 0.16), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 90% 85%, rgba(5, 150, 105, 0.18), transparent 65%);
+    background-attachment: fixed;
+    color: #F7F9F4;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .spark-glass {
+    background: linear-gradient(
+      155deg,
+      rgba(9, 39, 26, 0.88) 0%,
+      rgba(4, 22, 15, 0.94) 100%
+    );
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(212, 175, 55, 0.34);
+    box-shadow:
+      0 14px 36px -10px rgba(0, 0, 0, 0.82),
+      0 0 20px -6px rgba(212, 175, 55, 0.18),
+      inset 0 1px 0 0 rgba(253, 230, 138, 0.24),
+      inset 0 -1px 0 0 rgba(212, 175, 55, 0.18);
+  }
+
+  .spark-glass-interactive {
+    background: linear-gradient(
+      155deg,
+      rgba(11, 45, 30, 0.86) 0%,
+      rgba(5, 25, 17, 0.94) 100%
+    );
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(212, 175, 55, 0.38);
+    box-shadow:
+      0 14px 36px -10px rgba(0, 0, 0, 0.82),
+      0 0 22px -6px rgba(212, 175, 55, 0.2),
+      inset 0 1px 0 0 rgba(253, 230, 138, 0.26);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .spark-glass-interactive:hover {
+    border-color: rgba(250, 204, 21, 0.72);
+    box-shadow:
+      0 18px 44px -10px rgba(16, 185, 129, 0.32),
+      0 0 28px -4px rgba(234, 179, 8, 0.38),
+      inset 0 1px 0 0 rgba(254, 240, 138, 0.45);
+  }
+
+  .spark-text-gradient {
+    background: linear-gradient(135deg, #FEF9C3 0%, #FACC15 48%, #34D399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .spark-border-glow {
+    position: relative;
+  }
+
+  .spark-border-glow::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(250, 204, 21, 0.65),
+      rgba(16, 185, 129, 0.55),
+      rgba(212, 175, 55, 0.25)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+/* Custom sleek emerald & gold scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03110B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #144932;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* React Flow dark theme overrides (Emerald & Gold) */
+.react-flow__node {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-flow__controls {
+  background: rgba(6, 28, 19, 0.92) !important;
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65) !important;
+}
+
+.react-flow__controls-button {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+  fill: #FDE047 !important;
+}
+
+.react-flow__controls-button:hover {
+  background: rgba(16, 185, 129, 0.25) !important;
+}

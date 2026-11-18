@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.local
+spark_ai.db
+spark_ai.db-journal
+spark_ai.db-wal
+*.log
+.DS_Store
