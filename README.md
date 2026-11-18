@@ -92,6 +92,7 @@ npm run dev
 - **Operational Command Center:** `http://localhost:3000/dashboard`
 
 ---
+Make sure the everything is up to the date !!
 
 ## 5. Running with Docker Compose (Single Command)
 
